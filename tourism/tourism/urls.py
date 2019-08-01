@@ -1,13 +1,22 @@
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from tourism import views
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
+    path('advert/', include('advert.urls')),
+    path('', include('advert.urls')),
     path('admin/', admin.site.urls),
-    path('uganda/', views.uganda),
-    path('', views.uganda),
 ]
+
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('uganda/', views.uganda),
+#     path('', views.uganda),
+# ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
 

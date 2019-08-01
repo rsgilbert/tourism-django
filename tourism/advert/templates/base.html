@@ -1,0 +1,54 @@
+<html>
+    <head>
+        {% load static %}
+        <title>Visit Uganda</title>
+        <link href="{% static 'advert/css/base.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'advert/css/index.css' %}">
+    </head>
+    <body>
+        <nav class="advert__nav">
+            <ul class="nav__items">
+                <li class="nav__item">
+                    <a href='#'>Destinations</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#">Deals</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#">About Us</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#">Make A Difference</a>
+                </li>
+            </ul>
+        </nav>
+
+        <h1>Breadcrumb</h1>
+
+        <main>
+                {% block content %}
+
+                {% endblock %}
+        </main>
+
+
+        <footer class="base__footer">
+            <ul class="footer__links">
+                <li class="footer__link">
+                    <a href="#">Terms and Conditions</a>
+                </li>
+                <li class="footer__link">
+                    <a href="#">Booking Conditions</a>
+                </li>
+                <li class="footer__link">
+                    <a href="#">Privacy Policy</a>
+                </li>
+                <li class="footer__link">
+                    <a href="#">Sitemap</a>
+                </li>
+            </ul>
+        </footer>
+
+
+    </body>
+</html>
